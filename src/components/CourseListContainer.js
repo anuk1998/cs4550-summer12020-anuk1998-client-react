@@ -13,7 +13,8 @@ class CourseListContainer extends React.Component {
 
     componentDidMount() {
         CourseService.findAllCourses()
-                    .then(actualArrayOfCourses => this.setState({
+                    .then(actualArrayOfCourses =>
+                        this.setState({
                         courses: actualArrayOfCourses
             }))
     }
@@ -55,9 +56,7 @@ class CourseListContainer extends React.Component {
         CourseService.deleteCourse(courseToDelete._id)
             .then(status => this.setState(prevState => ({
                     courses: prevState
-                        .courses.filter(course => course !== courseToDelete
-                        )
-
+                        .courses.filter(course => course !== courseToDelete)
                 })))
     }
 
@@ -92,7 +91,9 @@ class CourseListContainer extends React.Component {
                 {
                     this.state.layout == 'grid' &&
                     <div>
-                        <button onClick = {() => this.setLayout('table')}>
+                        <button
+                            onClick = {() =>
+                                this.setLayout('table')}>
                             Table
                         </button>
                     <CourseGridComponent courses = {this.state.courses}/>

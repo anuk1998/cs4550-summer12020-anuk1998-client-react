@@ -7,7 +7,7 @@ const CourseEditor = () => {
     return(
         <div>
             <Link to = "/courses">Back</Link>
-        <h1>Course Editor</h1>
+        <h2>Course Editor</h2>
 
             <div className = "row">
                 <div className = "col-4">

@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import CourseService from "../services/CourseService";
+import CourseService from '../services/CourseService';
 
 export default class CourseRowComponent extends React.Component {
     //local state
@@ -46,22 +46,25 @@ render() {
             <td>{this.state.courses.owner}</td>
             <td>{this.state.courses.modified}</td>
             <td>
-                {!this.state.editing &&
+                {
+                    !this.state.editing &&
                 <button
                     className = "btn btn-primary"
                     onClick={() => this.setEditing(true)}>
                     Edit
                 </button>
                 }
-                {this.state.editing &&
+                {
+                    this.state.editing &&
                 <span>
                 <button
                     className = "btn btn-success"
-                    onClick = {this.ok}>Ok</button>
-
+                    onClick = {this.ok}>
+                    Ok</button>
                 <button
                     className = "btn btn-danger"
-                    onClick = {() => this.props.deleteCourse(this.props.courses)}>
+                    onClick = {
+                        () => this.props.deleteCourse(this.props.courses)}>
                     Delete</button>
             </span>
                 }

@@ -17,7 +17,7 @@ class WhiteBoard extends React.Component{
                 {/*To Do: routes to registration, profile components*/}
 
                 <Route
-                    path = '/login'
+                    path = "/login"
                     exact = {true}
                     component = {LoginComponent}
                 />

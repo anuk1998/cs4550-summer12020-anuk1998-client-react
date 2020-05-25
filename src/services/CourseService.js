@@ -24,15 +24,17 @@ const updateCourse = (courseId, course) =>
 
 
 
-const deleteCourse = (courseId) => {
-    return fetch(("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses/" + courseId), {
+const deleteCourse = (courseId) =>
+    fetch(("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses/" + courseId), {
         method: 'DELETE'
     })
+        .then(response => response.json())
 
-}
+
 
 
 const findCourseById = (courseId) => {}
+
 const findAllCourses = () =>
      fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses")
         .then(response => response.json())
