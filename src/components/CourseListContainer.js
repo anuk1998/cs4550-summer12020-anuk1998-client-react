@@ -66,18 +66,7 @@ class CourseListContainer extends React.Component {
         return (
             <div>
 
-                <nav className="navbar navbar-light fixed-top justify-content-between">
-
-
-                    <button className="navbar-toggler wbdv-field wbdv-hamburger" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <a className="navbar-brand wbdv-label wbdv-course-manager" href="#"><h2> Course Manager</h2> </a>
-                </nav>
-
-
+<h2>Course Manager</h2>
                 <input className = ""
                     onChange = {(event) => this.setState({
                         newCourseTitle: event.target.value
@@ -118,7 +107,9 @@ class CourseListContainer extends React.Component {
                                 this.setLayout('table')}>
                             <i className="fa fa-list" aria-hidden="true"></i>
                         </button>
-                    <CourseGridComponent courses = {this.state.courses}/>
+                    <CourseGridComponent
+                        deleteCourse = {this.deleteCourse}
+                        courses = {this.state.courses}/>
                     </div>
                 }
             </div>
