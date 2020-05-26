@@ -65,15 +65,28 @@ class CourseListContainer extends React.Component {
     render() {
         return (
             <div>
-                <h2>Course List </h2>
-                <input
+
+                <nav className="navbar navbar-light fixed-top justify-content-between">
+
+
+                    <button className="navbar-toggler wbdv-field wbdv-hamburger" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <a className="navbar-brand wbdv-label wbdv-course-manager" href="#"><h2> Course Manager</h2> </a>
+                </nav>
+
+
+                <input className = ""
                     onChange = {(event) => this.setState({
                         newCourseTitle: event.target.value
                     })}
                     value = {this.state.newCourseTitle}
                     placeholder = "Course Title"/>
+
                 <button
-                    className = "btn btn-primary"
+                    className = "btn btn-primary "
                     onClick = {
                     () => this.addCourse(this.state.newCourseTitle)}>
                     <i className="fa fa-plus" aria-hidden="true"></i></button>
@@ -82,8 +95,9 @@ class CourseListContainer extends React.Component {
                 {
                     this.state.layout == 'table' &&
                         <div>
+                            <button className = "float-right btn btn-white ">
+                                <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
                             <button
-
                                 className = "float-right btn btn-white"
                                 onClick = {() => this.setLayout('grid')}>
                                 <i className="fa fa-th" aria-hidden="true"></i>
@@ -96,6 +110,8 @@ class CourseListContainer extends React.Component {
                 {
                     this.state.layout == 'grid' &&
                     <div>
+                        <button className = "float-right btn btn-white ">
+                            <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
                         <button
                             className = "float-right btn btn-white"
                             onClick = {() =>

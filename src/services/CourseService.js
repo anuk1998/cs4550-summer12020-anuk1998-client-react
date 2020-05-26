@@ -10,6 +10,8 @@ const createCourse = (course) =>
 
 
 
+
+
 const updateCourse = (courseId, course) =>
     fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses/" + courseId, {
         method: 'PUT',
@@ -31,9 +33,14 @@ const deleteCourse = (courseId) =>
         .then(response => response.json())
 
 
+const findCourseById = (courseId) => {
+return fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses/" + courseId)
+        .then(function(response) {
+            return response.json()
+        })
+}
 
 
-const findCourseById = (courseId) => {}
 
 const findAllCourses = () =>
      fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses")

@@ -6,8 +6,7 @@ import {Link} from "react-router-dom";
 const CourseEditor = () => {
     return(
         <div>
-            <Link to = "/courses">Back</Link>
-
+            <Link to = "/table/courses">Back</Link>
 
             <div>
 

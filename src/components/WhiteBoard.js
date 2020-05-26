@@ -7,13 +7,15 @@ import CourseTableComponent from "./CourseTableComponent";
 import HomeComponent from "./HomeComponent";
 import LoginComponent from "./LoginComponent";
 import CourseCardComponent from "./CourseCardComponent";
+import RegisterComponent from "./RegisterComponent";
+import ProfileComponent from "./ProfileComponent";
 
 class WhiteBoard extends React.Component{
     render() {
         return(
             <BrowserRouter>
             <div>
-                <h1>Course Manager</h1>
+                <h1></h1>
 
                 {/*To Do: routes to registration, profile components*/}
 
@@ -21,6 +23,12 @@ class WhiteBoard extends React.Component{
                     path = "/login"
                     exact = {true}
                     component = {LoginComponent}
+                />
+
+                <Route
+                    path = "/register"
+                    exact = {true}
+                    component = {RegisterComponent}
                 />
 
                 <Route
@@ -43,6 +51,11 @@ class WhiteBoard extends React.Component{
                     path = '/editor'
                     exact = {true}
                     component = {CourseEditor}/>
+
+                <Route
+                    path = '/profile'
+                    exact = {true}
+                    component = {ProfileComponent}/>
 
 
             </div>

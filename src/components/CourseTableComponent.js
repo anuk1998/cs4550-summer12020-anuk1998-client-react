@@ -14,11 +14,7 @@ render() {
                         <th>Title</th>
                         <th>Owner</th>
                         <th>Last Modified</th>
-                        <th>
-                            <button className = "btn btn-white">
-                                <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
-                            <button>Grid</button>
-                        </th>
+                        <th>Modify</th>
                     </tr>
                     </thead>
                     <tbody>
