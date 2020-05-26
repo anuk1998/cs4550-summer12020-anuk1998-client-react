@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import CourseService from '../services/CourseService';
 
+
 export default class CourseRowComponent extends React.Component {
     //local state
     state = {
@@ -49,23 +50,23 @@ render() {
                 {
                     !this.state.editing &&
                 <button
-                    className = "btn btn-primary"
+                    className = "btn btn-white"
                     onClick={() => this.setEditing(true)}>
-                    Edit
+                    <i className="fa fa-pencil" aria-hidden="true"></i>
                 </button>
                 }
                 {
                     this.state.editing &&
                 <span>
                 <button
-                    className = "btn btn-success"
+                    className = "btn btn-success "
                     onClick = {this.ok}>
-                    Ok</button>
+                   <i className="fa fa-check" aria-hidden="true"></i></button>
                 <button
                     className = "btn btn-danger"
                     onClick = {
                         () => this.props.deleteCourse(this.props.courses)}>
-                    Delete</button>
+                    <i className="fa fa-trash" aria-hidden="true"></i></button>
             </span>
                 }
                 </td>

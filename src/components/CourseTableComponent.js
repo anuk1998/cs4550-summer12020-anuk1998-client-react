@@ -2,18 +2,21 @@ import React from "react"
 import CourseRowComponent from "./CourseRowComponent"
 
 export default class CourseTableComponent extends React.Component {
-    render() {
+
+render() {
         return(
             <div>
-            <h3>Course Table {this.props.courses.length}</h3>
-                <table className = "table">
+            <h3>Course Table </h3>
+
+                <table className = "table table-striped">
                     <thead>
-                    <tr>
+                    <tr className = "table-light">
                         <th>Title</th>
                         <th>Owner</th>
                         <th>Last Modified</th>
                         <th>
-                            <button>Sort</button>
+                            <button className = "btn btn-white">
+                                <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
                             <button>Grid</button>
                         </th>
                     </tr>

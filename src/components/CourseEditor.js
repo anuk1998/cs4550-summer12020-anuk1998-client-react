@@ -7,7 +7,40 @@ const CourseEditor = () => {
     return(
         <div>
             <Link to = "/courses">Back</Link>
-        <h2>Course Editor</h2>
+
+
+            <div>
+
+                <ul className="nav nav-tabs float-right">
+                    <li>
+                        <a className="navbar navbar-light wbdv-course-title"><h3>Course Editor</h3>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" >Build</a>
+                    </li>
+                    <li className="nav-item wbdv-page-tab">
+                        <a className="nav-link active">Pages</a></li>
+                    <li className="nav-item">
+                        <a className="nav-link" >Theme</a></li>
+                    <li className="nav-item">
+                        <a className="nav-link" >Store</a></li>
+                    <li className="nav-item">
+                        <a className="nav-link" >Apps</a></li>
+                    <li className="nav-item">
+                        <a className="nav-link">Settings</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+
+
+
+
 
             <div className = "row">
                 <div className = "col-4">

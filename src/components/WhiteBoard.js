@@ -6,13 +6,14 @@ import CourseGridComponent from "./CourseGridComponent";
 import CourseTableComponent from "./CourseTableComponent";
 import HomeComponent from "./HomeComponent";
 import LoginComponent from "./LoginComponent";
+import CourseCardComponent from "./CourseCardComponent";
 
 class WhiteBoard extends React.Component{
     render() {
         return(
             <BrowserRouter>
             <div>
-                <h1>WhiteBoard</h1>
+                <h1>Course Manager</h1>
 
                 {/*To Do: routes to registration, profile components*/}
 
@@ -42,7 +43,6 @@ class WhiteBoard extends React.Component{
                     path = '/editor'
                     exact = {true}
                     component = {CourseEditor}/>
-
 
 
             </div>

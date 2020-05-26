@@ -3,6 +3,7 @@ import CourseTableComponent from "./CourseTableComponent";
 import CourseGridComponent from "./CourseGridComponent";
 import CourseService from "../services/CourseService";
 
+
 class CourseListContainer extends React.Component {
 
     state = {
@@ -64,24 +65,28 @@ class CourseListContainer extends React.Component {
     render() {
         return (
             <div>
-                <h2>CourseList {this.state.courses.length}</h2>
+                <h2>Course List </h2>
                 <input
                     onChange = {(event) => this.setState({
                         newCourseTitle: event.target.value
                     })}
                     value = {this.state.newCourseTitle}
                     placeholder = "Course Title"/>
-                <button onClick = {
+                <button
+                    className = "btn btn-primary"
+                    onClick = {
                     () => this.addCourse(this.state.newCourseTitle)}>
-                    Add Course</button>
+                    <i className="fa fa-plus" aria-hidden="true"></i></button>
 
                 <br/>
                 {
                     this.state.layout == 'table' &&
                         <div>
                             <button
+
+                                className = "float-right btn btn-white"
                                 onClick = {() => this.setLayout('grid')}>
-                                Grid
+                                <i className="fa fa-th" aria-hidden="true"></i>
                             </button>
                     <CourseTableComponent
                         deleteCourse = {this.deleteCourse}
@@ -92,9 +97,10 @@ class CourseListContainer extends React.Component {
                     this.state.layout == 'grid' &&
                     <div>
                         <button
+                            className = "float-right btn btn-white"
                             onClick = {() =>
                                 this.setLayout('table')}>
-                            Table
+                            <i className="fa fa-list" aria-hidden="true"></i>
                         </button>
                     <CourseGridComponent courses = {this.state.courses}/>
                     </div>
