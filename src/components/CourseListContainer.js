@@ -14,10 +14,10 @@ class CourseListContainer extends React.Component {
 
     componentDidMount() {
         CourseService.findAllCourses()
-                    .then(actualArrayOfCourses =>
-                        this.setState({
-                        courses: actualArrayOfCourses
-            }))
+            .then(actualArrayOfCourses =>
+                this.setState({
+                    courses: actualArrayOfCourses
+                }))
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -35,14 +35,14 @@ class CourseListContainer extends React.Component {
         this.props.history.push(`/${layout}/courses`)
     }
 
-    addCourse = (title)  =>
+    addCourse = (title) =>
         CourseService.createCourse({
             title: title,
             owner: 'me',
             modified: (new Date()).toDateString()
         })
             .then(theActualNewCourse =>
-                this.setState( (prevState) => {
+                this.setState((prevState) => {
                     return {
                         courses: [
                             ...prevState.courses,
@@ -52,13 +52,12 @@ class CourseListContainer extends React.Component {
                 }))
 
 
-
     deleteCourse = (courseToDelete) => {
         CourseService.deleteCourse(courseToDelete._id)
             .then(status => this.setState(prevState => ({
-                    courses: prevState
-                        .courses.filter(course => course !== courseToDelete)
-                })))
+                courses: prevState
+                    .courses.filter(course => course !== courseToDelete)
+            })))
     }
 
 
@@ -66,55 +65,55 @@ class CourseListContainer extends React.Component {
         return (
             <div>
 
-<h2>Course Manager</h2>
-                <input className = ""
-                    onChange = {(event) => this.setState({
-                        newCourseTitle: event.target.value
-                    })}
-                    value = {this.state.newCourseTitle}
-                    placeholder = "Course Title"/>
+                <h2>Course Manager</h2>
+                <input className=""
+                       onChange={(event) => this.setState({
+                           newCourseTitle: event.target.value
+                       })}
+                       value={this.state.newCourseTitle}
+                       placeholder="Course Title"/>
 
                 <button
-                    className = "btn btn-primary "
-                    onClick = {
-                    () => this.addCourse(this.state.newCourseTitle)}>
+                    className="btn btn-primary "
+                    onClick={
+                        () => this.addCourse(this.state.newCourseTitle)}>
                     <i className="fa fa-plus" aria-hidden="true"></i></button>
 
                 <br/>
                 {
                     this.state.layout == 'table' &&
-                        <div>
-                            <button className = "float-right btn btn-white ">
-                                <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
-                            <button
-                                className = "float-right btn btn-white"
-                                onClick = {() => this.setLayout('grid')}>
-                                <i className="fa fa-th" aria-hidden="true"></i>
-                            </button>
-                    <CourseTableComponent
-                        deleteCourse = {this.deleteCourse}
-                        courses = {this.state.courses}/>
-                        </div>
+                    <div>
+                        <button className="float-right btn btn-white ">
+                            <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
+                        <button
+                            className="float-right btn btn-white"
+                            onClick={() => this.setLayout('grid')}>
+                            <i className="fa fa-th" aria-hidden="true"></i>
+                        </button>
+                        <CourseTableComponent
+                            deleteCourse={this.deleteCourse}
+                            courses={this.state.courses}/>
+                    </div>
                 }
                 {
                     this.state.layout == 'grid' &&
                     <div>
-                        <button className = "float-right btn btn-white ">
+                        <button className="float-right btn btn-white ">
                             <i className="fa fa-sort-alpha-asc" aria-hidden="true"></i></button>
                         <button
-                            className = "float-right btn btn-white"
-                            onClick = {() =>
+                            className="float-right btn btn-white"
+                            onClick={() =>
                                 this.setLayout('table')}>
                             <i className="fa fa-list" aria-hidden="true"></i>
                         </button>
-                    <CourseGridComponent
-                        deleteCourse = {this.deleteCourse}
-                        courses = {this.state.courses}/>
+                        <CourseGridComponent
+                            deleteCourse={this.deleteCourse}
+                            courses={this.state.courses}/>
                     </div>
                 }
             </div>
 
-    )
+        )
     }
 }
 

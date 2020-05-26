@@ -6,10 +6,10 @@ import {Link} from "react-router-dom";
 
 //stateless component
 const CourseEditor = () => {
-    return(
+    return (
         <div>
             <Link
-                to = "/table/courses">Back</Link>
+                to="/table/courses">Back</Link>
 
             <div>
                 <ul className="nav nav-tabs">
@@ -18,16 +18,16 @@ const CourseEditor = () => {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" >Build</a>
+                        <a className="nav-link">Build</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link active">Pages</a></li>
                     <li className="nav-item">
-                        <a className="nav-link" >Theme</a></li>
+                        <a className="nav-link">Theme</a></li>
                     <li className="nav-item">
-                        <a className="nav-link" >Store</a></li>
+                        <a className="nav-link">Store</a></li>
                     <li className="nav-item">
-                        <a className="nav-link" >Apps</a></li>
+                        <a className="nav-link">Apps</a></li>
                     <li className="nav-item">
                         <a className="nav-link">Settings</a>
                     </li>
@@ -35,19 +35,17 @@ const CourseEditor = () => {
             </div>
 
 
-
-
-            <div className = "row">
-                <div className = "col-4">
+            <div className="row">
+                <div className="col-4">
                     <ModuleListComponent/>
                 </div>
-                <div className = "col-8">
+                <div className="col-8">
 
 
-            <LessonTabsComponent/>
+                    <LessonTabsComponent/>
                     <TopicPillsComponent/>
-        </div>
-        </div>
+                </div>
+            </div>
         </div>
 
     )

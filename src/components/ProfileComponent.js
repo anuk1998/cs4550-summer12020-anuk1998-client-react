@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProfileComponent = () => {
-    return(
+    return (
         <div>
 
             <div className="container">

@@ -6,10 +6,7 @@ const createCourse = (course) =>
             'content-type': 'application/json'
         }
     })
-        .then(response => response.json() )
-
-
-
+        .then(response => response.json())
 
 
 const updateCourse = (courseId, course) =>
@@ -23,9 +20,6 @@ const updateCourse = (courseId, course) =>
         .then(response => response.json())
 
 
-
-
-
 const deleteCourse = (courseId) =>
     fetch(("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses/" + courseId), {
         method: 'DELETE'
@@ -34,16 +28,15 @@ const deleteCourse = (courseId) =>
 
 
 const findCourseById = (courseId) => {
-return fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses/" + courseId)
-        .then(function(response) {
+    return fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses/" + courseId)
+        .then(function (response) {
             return response.json()
         })
 }
 
 
-
 const findAllCourses = () =>
-     fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses")
+    fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/courses")
         .then(response => response.json())
 
 

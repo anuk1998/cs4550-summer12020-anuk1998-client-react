@@ -10,55 +10,55 @@ import CourseCardComponent from "./CourseCardComponent";
 import RegisterComponent from "./RegisterComponent";
 import ProfileComponent from "./ProfileComponent";
 
-class WhiteBoard extends React.Component{
+class WhiteBoard extends React.Component {
     render() {
-        return(
+        return (
             <BrowserRouter>
-            <div>
-                <h1></h1>
+                <div>
+                    <h1></h1>
 
-                {/*To Do: routes to registration, profile components*/}
+                    {/*To Do: routes to registration, profile components*/}
 
-                <Route
-                    path = "/login"
-                    exact = {true}
-                    component = {LoginComponent}
-                />
-
-                <Route
-                    path = "/register"
-                    exact = {true}
-                    component = {RegisterComponent}
-                />
-
-                <Route
-                    path = '/'
-                    exact = {true}
-                    component = {HomeComponent}
+                    <Route
+                        path="/login"
+                        exact={true}
+                        component={LoginComponent}
                     />
-                <Route
-                    path = '/courses'
-                    exact = {true}
-                    component = {CourseListContainer}/>
 
-                <Route
-                    path = '/:layout/courses'
-                    exact = {true}
-                    component = {CourseListContainer}/>
+                    <Route
+                        path="/register"
+                        exact={true}
+                        component={RegisterComponent}
+                    />
+
+                    <Route
+                        path='/'
+                        exact={true}
+                        component={HomeComponent}
+                    />
+                    <Route
+                        path='/courses'
+                        exact={true}
+                        component={CourseListContainer}/>
+
+                    <Route
+                        path='/:layout/courses'
+                        exact={true}
+                        component={CourseListContainer}/>
 
 
-                <Route
-                    path = '/editor'
-                    exact = {true}
-                    component = {CourseEditor}/>
+                    <Route
+                        path='/editor'
+                        exact={true}
+                        component={CourseEditor}/>
 
-                <Route
-                    path = '/profile'
-                    exact = {true}
-                    component = {ProfileComponent}/>
+                    <Route
+                        path='/profile'
+                        exact={true}
+                        component={ProfileComponent}/>
 
 
-            </div>
+                </div>
             </BrowserRouter>
         )
     }

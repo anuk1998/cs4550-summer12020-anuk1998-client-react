@@ -37,60 +37,56 @@ export default class CourseCardComponent extends React.Component {
 
                         <h5 className="card-title"></h5>
 
-                       <tr>
-                                {
-                                    !this.state.editing &&
-                                    <Link to = "/editor">
-                                       {/* for now, linking to static editor. Will link to object id later.
+                        <tr>
+                            {
+                                !this.state.editing &&
+                                <Link to="/editor">
+                                    {/* for now, linking to static editor. Will link to object id later.
                                         to={`/editor/${this.state.courses._id}`}>*/}
 
-                                        <h4>{this.state.courses.title}</h4>
-                                    </Link>
+                                    <h4>{this.state.courses.title}</h4>
+                                </Link>
+                            }
+                            {this.state.editing && <input
+                                className="form-control"
+                                onChange={(event) => this.updateCourseTitle(event.target.value)}
+                                value={this.state.courses.title}/>}
+
+                            <td></td>
+
+                            <td>
+                                {
+                                    !this.state.editing &&
+                                    <button
+                                        className="btn btn-white"
+                                        onClick={() => this.setEditing(true)}>
+                                        <h4><i className="fa fa-pencil" aria-hidden="true"></i></h4>
+                                    </button>
                                 }
-                                {this.state.editing && <input
-                                    className = "form-control"
-                                    onChange = {(event) => this.updateCourseTitle(event.target.value) }
-                                    value = {this.state.courses.title}/>}
 
-                                    <td>       </td>
-
-                           <td>
-                               {
-                                   !this.state.editing &&
-                                   <button
-                                       className = "btn btn-white"
-                                       onClick={() => this.setEditing(true)}>
-                                       <h4><i className="fa fa-pencil" aria-hidden="true"></i></h4>
-                                   </button>
-                               }
-
-                               {
-                                   this.state.editing &&
-                                   <span>
-                                 <button className = "btn btn-success "
-                                         onClick = {this.ok}>
+                                {
+                                    this.state.editing &&
+                                    <span>
+                                 <button className="btn btn-success "
+                                         onClick={this.ok}>
                                 <i className="fa fa-check" aria-hidden="true"></i></button>
                                 <button
-                                    className = "btn btn-danger"
-                            onClick = {
-                                    () => this.props.deleteCourse(this.props.courses)}>
+                                    className="btn btn-danger"
+                                    onClick={
+                                        () => this.props.deleteCourse(this.props.courses)}>
                                  <i className="fa fa-trash" aria-hidden="true"></i></button>
                                 </span>
-                               }
-                           </td>
+                                }
+                            </td>
 
-                       </tr>
-<tr>
+                        </tr>
+                        <tr>
                             <td>{this.state.courses.owner}</td>
 
                             <td>{this.state.courses.modified}</td>
 
 
-
-                       </tr>
-
-
-
+                        </tr>
 
 
                     </div>

@@ -7,7 +7,7 @@ export default class CourseRowComponent extends React.Component {
     //local state
     state = {
         editing: false,
-        courses:  this.props.courses
+        courses: this.props.courses
     }
     setEditing = (editing) =>
         this.setState({editing: editing})
@@ -29,52 +29,52 @@ export default class CourseRowComponent extends React.Component {
         }))
 
 
-render() {
-    return (
-        <tr className = {this.state.editing ? 'table-primary' : ''}>
-            <td>
-                {
-                    !this.state.editing &&
+    render() {
+        return (
+            <tr className={this.state.editing ? 'table-primary' : ''}>
+                <td>
+                    {
+                        !this.state.editing &&
                         /*for now link to static editor, but later link to editor
                         of specific course ID
                          */
-                    <Link to = "/editor">
-                        {/*to={`/editor/${this.state.courses._id}`}>*/}
-                        {this.state.courses.title}
-                    </Link>
-                }
-                {this.state.editing && <input
-                    className = "form-control"
-                    onChange = {(event) => this.updateCourseTitle(event.target.value) }
-                    value = {this.state.courses.title}/>}
-            </td>
-            <td>{this.state.courses.owner}</td>
-            <td>{this.state.courses.modified}</td>
-            <td>
-                {
-                    !this.state.editing &&
+                        <Link to="/editor">
+                            {/*to={`/editor/${this.state.courses._id}`}>*/}
+                            {this.state.courses.title}
+                        </Link>
+                    }
+                    {this.state.editing && <input
+                        className="form-control"
+                        onChange={(event) => this.updateCourseTitle(event.target.value)}
+                        value={this.state.courses.title}/>}
+                </td>
+                <td>{this.state.courses.owner}</td>
+                <td>{this.state.courses.modified}</td>
+                <td>
+                    {
+                        !this.state.editing &&
+                        <button
+                            className="btn btn-white"
+                            onClick={() => this.setEditing(true)}>
+                            <i className="fa fa-pencil" aria-hidden="true"></i>
+                        </button>
+                    }
+                    {
+                        this.state.editing &&
+                        <span>
                 <button
-                    className = "btn btn-white"
-                    onClick={() => this.setEditing(true)}>
-                    <i className="fa fa-pencil" aria-hidden="true"></i>
-                </button>
-                }
-                {
-                    this.state.editing &&
-                <span>
-                <button
-                    className = "btn btn-success "
-                    onClick = {this.ok}>
+                    className="btn btn-success "
+                    onClick={this.ok}>
                    <i className="fa fa-check" aria-hidden="true"></i></button>
                 <button
-                    className = "btn btn-danger"
-                    onClick = {
+                    className="btn btn-danger"
+                    onClick={
                         () => this.props.deleteCourse(this.props.courses)}>
                     <i className="fa fa-trash" aria-hidden="true"></i></button>
             </span>
-                }
+                    }
                 </td>
-        </tr>
-    )
-}
+            </tr>
+        )
+    }
 }
