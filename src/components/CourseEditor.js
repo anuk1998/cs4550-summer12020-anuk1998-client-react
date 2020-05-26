@@ -1,24 +1,26 @@
 import React from "react";
-import ModuleList from "./ModuleList";
-import LessonTabs from "./LessonTabs";
+import ModuleListComponent from "./ModuleListComponent";
+import LessonTabsComponent from "./LessonTabsComponent";
+import TopicPillsComponent from "./TopicPillsComponent";
 import {Link} from "react-router-dom";
+
 //stateless component
 const CourseEditor = () => {
     return(
         <div>
-            <Link to = "/table/courses">Back</Link>
+            <Link
+                to = "/table/courses">Back</Link>
 
             <div>
-
-                <ul className="nav nav-tabs float-right">
+                <ul className="nav nav-tabs">
                     <li>
-                        <a className="navbar navbar-light wbdv-course-title"><h3>Course Editor</h3>
+                        <a className="navbar navbar-light "><h2>Course Editor</h2>
                         </a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" >Build</a>
                     </li>
-                    <li className="nav-item wbdv-page-tab">
+                    <li className="nav-item">
                         <a className="nav-link active">Pages</a></li>
                     <li className="nav-item">
                         <a className="nav-link" >Theme</a></li>
@@ -35,22 +37,15 @@ const CourseEditor = () => {
 
 
 
-
-
-
-
-
-
             <div className = "row">
                 <div className = "col-4">
-                    <ModuleList/>
+                    <ModuleListComponent/>
                 </div>
                 <div className = "col-8">
 
 
-            <LessonTabs/>
-            <h3>Topic Pills</h3>
-            <h3>Widget List</h3>
+            <LessonTabsComponent/>
+                    <TopicPillsComponent/>
         </div>
         </div>
         </div>

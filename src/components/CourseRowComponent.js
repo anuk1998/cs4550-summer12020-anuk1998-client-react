@@ -35,7 +35,11 @@ render() {
             <td>
                 {
                     !this.state.editing &&
-                    <Link to={`/editor/${this.state.courses._id}`}>
+                        /*for now link to static editor, but later link to editor
+                        of specific course ID
+                         */
+                    <Link to = "/editor">
+                        {/*to={`/editor/${this.state.courses._id}`}>*/}
                         {this.state.courses.title}
                     </Link>
                 }

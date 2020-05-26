@@ -12,7 +12,7 @@ import React from "react";
                         <div className="col-sm-10">
                             <input
                                 id="username"
-                                className="form-control wbdv-field wbdv-username"
+                                className="form-control"
                                 type="text"
                                 placeholder="joe123"
                                 title="Use this username to login"/>
@@ -27,7 +27,7 @@ import React from "react";
                         <div className="col-sm-10">
                             <input
                                 id="password"
-                                className="form-control wbdv-field wbdv-password"
+                                className="form-control"
                                 type="text"
                                 placeholder="#abd%2@l"
                                 title="Use this password to login"
@@ -43,7 +43,7 @@ import React from "react";
                         <div className="col-sm-10">
                             <input
                                 id="verify-password"
-                                className="form-control wbdv-field wbdv-password-verify"
+                                className="form-control"
                                 type="text"
                                 placeholder="#abd%2@l"
                                 title="Verify Password"
@@ -56,18 +56,18 @@ import React from "react";
                         <label className="col-sm-2 col-form-label"></label>
 
                         <div className="col-sm-10">
-                            <a href="../profile/profile.template.client.html"
+                            <a href=""
                                className="btn btn-primary btn-block wbdv-button wbdv-register">
                                 Register
                             </a>
 
-                            <a href="../index.html"
+                            <a href=""
                                className="">
                                 <button className="btn btn-danger">Cancel</button>
 
                             </a>
 
-                            <a className="float-right wbdv-link wbdv-login" href="../login/login.template.client.html">
+                            <a className="float-right " href="">
                                 Login
                             </a>
 

@@ -7,7 +7,7 @@ const ProfileComponent = () => {
             <div className="container">
                 <h1>Profile</h1>
             </div>
-            <div className="alert alert-success wbdv-message" role="alert">
+            <div className="alert alert-success " role="alert">
                 Profile Successfully Saved
             </div>
 
@@ -18,7 +18,7 @@ const ProfileComponent = () => {
                 <div className="col-sm-10">
                     <input
                         id="username"
-                        className="form-control wbdv-field wbdv-username"
+                        className="form-control "
                         type="text"
                         placeholder="Anu1898"
                     />
@@ -33,7 +33,7 @@ const ProfileComponent = () => {
                 <div className="col-sm-10">
                     <input
                         id="phone"
-                        className="form-control wbdv-field wbdv-phone"
+                        className="form-control "
                         type="text"
                         placeholder="609-721-3139"
                     />
@@ -48,7 +48,7 @@ const ProfileComponent = () => {
                 <div className="col-sm-10">
                     <input
                         id="email"
-                        className="form-control wbdv-field wbdv-email"
+                        className="form-control"
                         type="text"
                         placeholder="kandasamy.a@husky.neu.edu"
                     />
@@ -58,7 +58,7 @@ const ProfileComponent = () => {
 
 
             <div className="form-group row">
-                <label className="col-sm-2 col-form-label wbdv-field wbdv-role">Role</label>
+                <label className="col-sm-2 col-form-label ">Role</label>
 
                 <div className="col-sm-10">
                     <select className="custom-select">
@@ -78,7 +78,7 @@ const ProfileComponent = () => {
                 <div className="col-sm-10">
                     <input
                         id="date"
-                        className="form-control wbdv-field wbdv-dob"
+                        className="form-control"
                         type="date"
                         value="mm/dd/yyyy"/>
 
@@ -91,8 +91,8 @@ const ProfileComponent = () => {
                 <label className="col-sm-2 col-form-label"></label>
 
                 <div className="col-sm-10">
-                    <a href="../profile/profile.template.client.html"
-                       className="btn btn-success btn-block wbdv-button wbdv-update">
+                    <a href=""
+                       className="btn btn-success btn-block">
                         Update
                     </a>
                 </div>
@@ -104,8 +104,8 @@ const ProfileComponent = () => {
                 <label className="col-sm-2 col-form-label"></label>
 
                 <div className="col-sm-10">
-                    <a href="../index.html"
-                       className="btn btn-danger btn-block wbdv-button wbdv-logout">
+                    <a href=""
+                       className="btn btn-danger btn-block">
                         Logout
                     </a>
                 </div>

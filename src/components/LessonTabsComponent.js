@@ -1,6 +1,6 @@
 import React from "react"
 
-const LessonTabs = () =>
+const LessonTabsComponent = () =>
     <div>
     <h3>Lessons</h3>
 
@@ -26,4 +26,4 @@ const LessonTabs = () =>
 
 </div>
 
-export default LessonTabs
+export default LessonTabsComponent

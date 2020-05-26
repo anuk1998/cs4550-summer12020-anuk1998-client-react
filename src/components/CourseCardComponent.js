@@ -29,9 +29,9 @@ export default class CourseCardComponent extends React.Component {
     render() {
         return (
             <div>
-                <div className="card" styles={{width: '18rem'}}>
+                <div className="card">
                     <img className="card-img-top"
-                         src="https://picsum.photos/300/200"/>
+                         src="https://www.pcc.edu/instructional-support/wp-content/uploads/sites/17/2018/03/Googledocslogo-250x250.png"/>
 
                     <div className="card-body">
 
@@ -40,7 +40,10 @@ export default class CourseCardComponent extends React.Component {
                        <tr>
                                 {
                                     !this.state.editing &&
-                                    <Link to={`/editor/${this.state.courses._id}`}>
+                                    <Link to = "/editor">
+                                       {/* for now, linking to static editor. Will link to object id later.
+                                        to={`/editor/${this.state.courses._id}`}>*/}
+
                                         <h4>{this.state.courses.title}</h4>
                                     </Link>
                                 }
@@ -92,8 +95,6 @@ export default class CourseCardComponent extends React.Component {
 
                     </div>
                 </div>
-
-
 
             </div>)
     }

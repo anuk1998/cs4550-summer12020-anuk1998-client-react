@@ -46,7 +46,7 @@ const LoginComponent = () => {
 
                 <div className="col-sm-10">
 
-                    <a href="../profile/profile.template.client.html"
+                    <a href=""
                        className="btn btn-primary btn-block">
                         Login
                     </a>
@@ -56,15 +56,15 @@ const LoginComponent = () => {
                     </a>
 
 
-                    <a href="../register/register.template.client.html"
-                       className="float-right wbdv-link wbdv-register">
+                    <a href=""
+                       className="float-right">
                         Register
                     </a>
 
 
                 </div>
 
-                <a href="../index.html"
+                <a href=""
                    className="">
                     <button className="btn btn-danger">Cancel</button>
 
