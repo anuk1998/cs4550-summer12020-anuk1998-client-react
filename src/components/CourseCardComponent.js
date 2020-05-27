@@ -29,7 +29,7 @@ export default class CourseCardComponent extends React.Component {
     render() {
         return (
             <div>
-                <div className="card">
+                <div className="card" >
                     <img className="card-img-top"
                          src="https://www.pcc.edu/instructional-support/wp-content/uploads/sites/17/2018/03/Googledocslogo-250x250.png"/>
 
