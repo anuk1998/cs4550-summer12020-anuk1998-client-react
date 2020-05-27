@@ -20,10 +20,11 @@ const CourseEditor = () => {
                                     data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                                     aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
-                            </button></nav>
+                            </button>
+                        </nav>
 
                     </li>
-                    <li><h3>Course Editor</h3></li>
+                    <li><h1>Course Editor</h1></li>
                     <li className="nav-item">
                         <a className="nav-link">Build</a>
                     </li>

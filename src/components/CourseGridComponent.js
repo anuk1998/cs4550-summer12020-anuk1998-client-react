@@ -6,7 +6,7 @@ export default class CourseGridComponent extends React.Component {
         return (
             <div>
                 <div className="container-fluid">
-                    <h1>Course Grid</h1>
+                    <h3>Course Grid</h3>
                     <div className="card-deck">
                         {
                             this.props.courses.map(course =>

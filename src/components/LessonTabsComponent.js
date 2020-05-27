@@ -2,7 +2,7 @@ import React from "react"
 
 const LessonTabsComponent = () =>
     <div>
-        <h3>Lessons</h3>
+        <h4>Lessons</h4>
 
         <ul className="nav nav-tabs">
             <li className="nav-item">

@@ -2,7 +2,7 @@ import React from "react"
 
 const TopicPillsComponent = () =>
     <div>
-        <h3>Topics</h3>
+        <h4>Topics</h4>
 
         <ul class="nav nav-pills wbdv-topic-pill-list">
             <li class="nav-item wbdv-topic-pill">
@@ -20,13 +20,7 @@ const TopicPillsComponent = () =>
             <li class="nav-item wbdv-topic-pill">
                 <a class="nav-link" href="#">
                     Topic 5</a></li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#">
 
-                    <button class="btn btn-default wbdv-topic-add-btn">+</button>
-
-
-                </a></li>
 
         </ul>
     </div>

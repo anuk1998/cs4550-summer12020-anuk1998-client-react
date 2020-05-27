@@ -81,10 +81,12 @@ export default class CourseCardComponent extends React.Component {
 
                         </tr>
                         <tr>
-                            <td>{this.state.courses.owner}</td>
+                            <div class="card-body">
+                                Owner: {this.state.courses.owner}
 
-                            <td>{this.state.courses.modified}</td>
 
+                                <td>Last Modified: {this.state.courses.modified}</td>
+                            </div>
 
                         </tr>
 

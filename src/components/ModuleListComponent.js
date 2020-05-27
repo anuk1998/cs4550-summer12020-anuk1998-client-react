@@ -32,7 +32,7 @@ const ModuleListComponent = () =>
             <li className="list-group-item active module-x ">
                 <button
                     className="btn btn-white"> Module
-                  3
+                    3
                 </button>
                 <button
                     className="btn btn-white float-right wbdv-module-item-delete-btn"
@@ -43,7 +43,7 @@ const ModuleListComponent = () =>
             <li className="list-group-item  module-x ">
                 <button
                     className="btn btn-white"> Module
-                 4
+                    4
                 </button>
                 <button
                     className="btn btn-white float-right wbdv-module-item-delete-btn"
@@ -54,7 +54,7 @@ const ModuleListComponent = () =>
             <li className="list-group-item module-x ">
                 <button
                     className="btn btn-white"> Module
-                 5
+                    5
                 </button>
                 <button
                     className="btn btn-white float-right wbdv-module-item-delete-btn"
