@@ -8,15 +8,22 @@ import {Link} from "react-router-dom";
 const CourseEditor = () => {
     return (
         <div>
-            <Link
-                to="/table/courses">Back</Link>
+
 
             <div>
+
                 <ul className="nav nav-tabs">
                     <li>
-                        <a className="navbar navbar-light "><h2>Course Editor</h2>
-                        </a>
+                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                            <a className="navbar-brand" href="#"></a>
+                            <button className="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
+                            </button></nav>
+
                     </li>
+                    <li><h3>Course Editor</h3></li>
                     <li className="nav-item">
                         <a className="nav-link">Build</a>
                     </li>
@@ -31,6 +38,7 @@ const CourseEditor = () => {
                     <li className="nav-item">
                         <a className="nav-link">Settings</a>
                     </li>
+
                 </ul>
             </div>
 
@@ -38,12 +46,15 @@ const CourseEditor = () => {
             <div className="row">
                 <div className="col-4">
                     <ModuleListComponent/>
+                    <Link
+                        to="/table/courses">Back</Link>
                 </div>
                 <div className="col-8">
 
 
                     <LessonTabsComponent/>
                     <TopicPillsComponent/>
+
                 </div>
             </div>
         </div>

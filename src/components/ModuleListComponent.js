@@ -1,13 +1,15 @@
 import React from "react"
 
+
 const ModuleListComponent = () =>
     <div>
         <h3>Module List</h3>
         <ul className="list-group wbdv-module-list">
+
             <li className="list-group-item  module-x ">
                 <button
-                    className="btn btn-white"> Module
-                    1 -React>
+                    className="btn btn-white"> Module 1
+
                 </button>
                 <button
                     className="btn btn-white float-right wbdv-module-item-delete-btn"
@@ -17,19 +19,8 @@ const ModuleListComponent = () =>
             </li>
             <li className="list-group-item  module-x ">
                 <button
-                    className="btn btn-white"> Module
-                    1 -React>
-                </button>
-                <button
-                    className="btn btn-white float-right wbdv-module-item-delete-btn"
-                    type="submit">
-                    X
-                </button>
-            </li>
-            <li className="list-group-item  module-x ">
-                <button
-                    className="btn btn-white"> Module
-                    1 -React>
+                    className="btn btn-white"> Module 2
+
                 </button>
                 <button
                     className="btn btn-white float-right"
@@ -41,7 +32,7 @@ const ModuleListComponent = () =>
             <li className="list-group-item active module-x ">
                 <button
                     className="btn btn-white"> Module
-                    1 -React>
+                  3
                 </button>
                 <button
                     className="btn btn-white float-right wbdv-module-item-delete-btn"
@@ -52,7 +43,7 @@ const ModuleListComponent = () =>
             <li className="list-group-item  module-x ">
                 <button
                     className="btn btn-white"> Module
-                    1 -React>
+                 4
                 </button>
                 <button
                     className="btn btn-white float-right wbdv-module-item-delete-btn"
@@ -63,7 +54,7 @@ const ModuleListComponent = () =>
             <li className="list-group-item module-x ">
                 <button
                     className="btn btn-white"> Module
-                    1 -React>
+                 5
                 </button>
                 <button
                     className="btn btn-white float-right wbdv-module-item-delete-btn"
