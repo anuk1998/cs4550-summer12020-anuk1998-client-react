@@ -10,6 +10,7 @@ export default class CourseTableComponent extends React.Component {
 
                 <table className="table table-striped">
                     <thead>
+
                     <tr className="table-light">
                         <th>Title</th>
                         <th>Owner</th>

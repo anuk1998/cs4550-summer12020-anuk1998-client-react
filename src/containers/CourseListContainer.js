@@ -1,6 +1,6 @@
 import React from "react"
-import CourseTableComponent from "./CourseTableComponent";
-import CourseGridComponent from "./CourseGridComponent";
+import CourseTableComponent from "../components/CourseTableComponent";
+import CourseGridComponent from "../components/CourseGridComponent";
 import CourseService from "../services/CourseService";
 
 
