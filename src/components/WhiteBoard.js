@@ -17,7 +17,6 @@ class WhiteBoard extends React.Component {
                 <div>
                     <h1></h1>
 
-                    {/*To Do: routes to registration, profile components*/}
 
                     <Route
                         path="/login"
@@ -51,6 +50,15 @@ class WhiteBoard extends React.Component {
                         path='/editor'
                         exact={true}
                         component={CourseEditor}/>
+
+                    <Route
+                        path={['/editor/:courseId', '/editor/:courseId/modules/:moduleId']}
+                        exact={true}
+                        render ={(props) => <CourseEditor {...props}
+                            courseId = {props.match.params.courseId}
+                                                          length = {props.match.params.length}/>
+                        }
+                        />
 
                     <Route
                         path='/profile'

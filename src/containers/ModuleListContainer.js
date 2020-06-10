@@ -58,3 +58,4 @@ const dispatchToPropertyMapper = (dispatch) => {
 
 const ModuleListContainer = connect(stateToPropertyMapper, dispatchToPropertyMapper)(ModuleListComponent)
 export default ModuleListContainer
+

@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import {createStore} from "redux";
+import {combineReducers, createStore} from "redux";
 import {connect, Provider} from "react-redux"
 import hello from './reducers/hello'
 import counterReducer from "./reducers/counterReducer";
@@ -14,17 +14,20 @@ import CounterComponent from "./components/CounterComponent";
 import moduleReducer from "./reducers/moduleReducer";
 import ModuleListComponent from "./components/ModuleListComponent";
 import ModuleListContainer from "./containers/ModuleListContainer";
+import lessonReducer from "./reducers/lessonReducer";
 
+const reducers = combineReducers({
+    moduleReducer, lessonReducer
+})
 
-
-const store = createStore(moduleReducer)
+const store = createStore(reducers)
 
 
 ReactDOM.render(
     <React.StrictMode>
-        {/*<App/>*/}
+        <App/>
         <Provider store = {store}>
-          <ModuleListContainer/>
+          {/*<ModuleListContainer/>*/}
         {/*<HelloContainer/>*/}
         </Provider>
     </React.StrictMode>,
