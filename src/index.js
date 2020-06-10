@@ -20,7 +20,7 @@ const reducers = combineReducers({
     moduleReducer, lessonReducer
 })
 
-const store = createStore(reducers)
+const store = createStore( reducers)
 
 
 ReactDOM.render(
