@@ -46,19 +46,14 @@ class WhiteBoard extends React.Component {
                         component={CourseListContainer}/>
 
 
-                    <Route
-                        path='/editor'
-                        exact={true}
-                        component={CourseEditor}/>
 
                     <Route
-                        path={['/editor/:courseId', '/editor/:courseId/modules/:moduleId']}
+                        path={['/editor/:courseId', '/editor/:courseId/modules/:moduleId',
+                            '/editor/modules/:moduleId/lessons/:lessonId',
+                            '/editor/lessons/:lessonId/topics/:topicId',
+                            '/editor/topics/:topicId/widgets/:widgetId']}
                         exact={true}
-                        render ={(props) => <CourseEditor {...props}
-                            courseId = {props.match.params.courseId}
-                                                          length = {props.match.params.length}/>
-                        }
-                        />
+                        component={CourseEditor}/>
 
                     <Route
                         path='/profile'

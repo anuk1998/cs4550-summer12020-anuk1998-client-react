@@ -12,17 +12,18 @@ class ModuleListComponent extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         if(prevProps.courseId !== this.props.courseId) {
-            this.props.findAllModules(this.props.params.courseId)
+            this.props.findAllModules(this.props.courseId)
         }
     }
 
     render() {
         return(
             <div>
-                <h1>Modules ({/*{this.props.modules.length}*/})</h1>
-                ({this.props.courseId})
+                <h1>Modules ({this.props.modules.length}) </h1>
+                ({this.props.params.courseId})
+
                 <ul>
-                    {
+                   {
                         this.props.modules.map(module =>
                                 <li key={module._id}>
                                     {
@@ -37,6 +38,7 @@ class ModuleListComponent extends React.Component {
                     }}>
                       Save
                     </button>
+
                     <input onChange={(e) => {
                         const newTitle = e.target.value
                         this.setState(prevState => ({
@@ -76,7 +78,9 @@ class ModuleListComponent extends React.Component {
                     })}>
                     Add
                 </button>
+
             </div>
+
         )
     }
 }

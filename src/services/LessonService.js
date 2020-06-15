@@ -12,4 +12,10 @@ export const createLesson = (moduleId, newLesson) =>
     })
         .then(response => response.json())
 
-export const deleteLesson = (lessonId) => {}
+export const deleteLesson = (lessonId) =>
+         fetch("https://wbdv-generic-server.herokuapp.com/api/anuk1998/modules/lessons" + lessonId, {
+            method: 'DELETE'
+        })
+            .then(response => response.json())
+
+

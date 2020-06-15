@@ -1,15 +1,16 @@
 import React from "react";
-import ModuleListComponent from "./ModuleListComponent";
-import LessonTabsComponent from "./LessonTabsComponent";
-import TopicPillsComponent from "./TopicPillsComponent";
-import ModuleListContainer from "../containers/ModuleListContainer";
+import ModuleList from "./ModuleList";
+import LessonTabs from "./LessonTabs";
 import {Link} from "react-router-dom";
+import ModuleListContainer from "../containers/ModuleListContainer";
+import TopicPillsComponent from "./TopicPillsComponent";
 
-//stateless component
+
+// stateless component
 const CourseEditor = ({match}) => {
     return(
         <div>
-            {match.params.courseId}
+
             <Link to="/courses">
                 Back
             </Link>
@@ -20,13 +21,21 @@ const CourseEditor = ({match}) => {
                     <ModuleListContainer {...match}/>
                 </div>
                 <div className="col-8">
-                    <LessonTabsComponent {...match}/>
-                    <h3>Topic Pills</h3>
+                    <LessonTabs {...match}/>
+
+                </div>
+
+                <div className= "col-8">
+
+                    <TopicPillsComponent {...match}/>
+
                 </div>
             </div>
         </div>
     )
 }
+
+export default CourseEditor
 
 /*const CourseEditor = () => {
     return (
@@ -86,4 +95,3 @@ const CourseEditor = ({match}) => {
     )
 }*/
 
-export default CourseEditor

@@ -5,7 +5,7 @@
 
 const initialState = {
     newModuleTitle: "Some Module",
-    modules: [],
+    modules: []
 }
 
 

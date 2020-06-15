@@ -15,9 +15,10 @@ import moduleReducer from "./reducers/moduleReducer";
 import ModuleListComponent from "./components/ModuleListComponent";
 import ModuleListContainer from "./containers/ModuleListContainer";
 import lessonReducer from "./reducers/lessonReducer";
+import topicReducer from "./reducers/topicReducer";
 
 const reducers = combineReducers({
-    moduleReducer, lessonReducer
+    moduleReducer, lessonReducer, topicReducer
 })
 
 const store = createStore( reducers)
@@ -25,9 +26,10 @@ const store = createStore( reducers)
 
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+
         <Provider store = {store}>
-          {/*<ModuleListContainer/>*/}
+            <App/>
+            {/*<ModuleListContainer/>*/}
         {/*<HelloContainer/>*/}
         </Provider>
     </React.StrictMode>,

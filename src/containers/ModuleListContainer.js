@@ -5,7 +5,7 @@ import moduleReducer from "../reducers/moduleReducer";
 
 const stateToPropertyMapper = (state, ownProps) => {
     return {
-        modules: moduleReducer.modules,
+        modules: state.moduleReducer.modules,
         newModuleTitle: moduleReducer.newModuleTitle,
         params: ownProps.params
     }
