@@ -4,6 +4,9 @@ import LessonTabs from "./LessonTabs";
 import {Link} from "react-router-dom";
 import ModuleListContainer from "../containers/ModuleListContainer";
 import TopicPillsComponent from "./TopicPillsComponent";
+import ModuleListComponent from "./ModuleListComponent";
+import WidgetListComponent from "./WidgetListComponent";
+
 
 
 // stateless component
@@ -26,6 +29,8 @@ const CourseEditor = ({match}) => {
                 </div>
 
                 <div className= "col-8">
+                    <WidgetListComponent/>
+                    <LessonTabs {...match}/>
 
                     <TopicPillsComponent {...match}/>
 

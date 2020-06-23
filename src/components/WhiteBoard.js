@@ -7,7 +7,7 @@ import CourseTableComponent from "./CourseTableComponent";
 import HomeComponent from "./HomeComponent";
 import LoginComponent from "./LoginComponent";
 import CourseCardComponent from "./CourseCardComponent";
-import RegisterComponent from "./RegisterComponent";
+import RegisterComponent from "./Register";
 import ProfileComponent from "./ProfileComponent";
 
 class WhiteBoard extends React.Component {
@@ -48,10 +48,12 @@ class WhiteBoard extends React.Component {
 
 
                     <Route
-                        path={['/editor/:courseId', '/editor/:courseId/modules/:moduleId',
-                            '/editor/modules/:moduleId/lessons/:lessonId',
-                            '/editor/lessons/:lessonId/topics/:topicId',
-                            '/editor/topics/:topicId/widgets/:widgetId']}
+                        path='/editor'
+                        exact={true}
+                        component={CourseEditor}/>
+
+                    <Route
+                        path={['/editor/:courseId', '/editor/:courseId/modules/:moduleId']}
                         exact={true}
                         component={CourseEditor}/>
 
